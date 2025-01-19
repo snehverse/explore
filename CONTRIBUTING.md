@@ -1,120 +1,90 @@
-# Contributing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneha's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Sneha</h1>
+    <p>Writer | Advertising & PR Enthusiast</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-Hi there! We're excited you have ideas to improve topics and collections. You're helping the community discover valuable information.
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome!</h2>
+    <p>Hi, I'm Sneha. A passionate storyteller, aspiring writer, and a future leader in Advertising and PR.</p>
+    <button onclick="location.href='#portfolio'">View My Work</button>
+  </section>
 
-This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Sneha, a bachelor's student in Advertising & PR. I love weaving words to craft compelling narratives, and I aspire to join creative teams that make an impact.
+    </p>
+    <p>Skills: Writing, PR Campaigns, Content Creation, Digital Marketing.</p>
+    <p>Fun Fact: When I'm not writing, I’m exploring new cuisines and dreaming about working at Zomato’s marketing team.</p>
+  </section>
 
-There are a few ways you can contribute:
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="project">
+      <h3>Project 1: Writing Sample</h3>
+      <p>A short story about finding joy in small things. <a href="#">Read More</a></p>
+    </div>
+    <div class="project">
+      <h3>Project 2: PR Campaign</h3>
+      <p>Details about a mock campaign for a brand. <a href="#">View Project</a></p>
+    </div>
+  </section>
 
-- Improving an existing topic or collection
-- Curating a new topic or collection
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2>Blog</h2>
+    <article>
+      <h3>My Journey in Advertising</h3>
+      <p>Reflections on my university projects and future goals. <a href="#">Read More</a></p>
+    </article>
+    <article>
+      <h3>Top 5 Campaigns That Inspire Me</h3>
+      <p>A breakdown of campaigns that shaped my vision in PR. <a href="#">Read More</a></p>
+    </article>
+  </section>
 
-As you write content, check out the [Style Guide](./docs/styleguide.md) to learn what each field means, and how it should be formatted. Following the style guide will increase the chances of your contribution being accepted.
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-Notes:
-
-- Updates won't immediately appear once we've merged your PR. We pull in these changes regularly to GitHub.
-- Please limit your pull request to the creation/updating of one topic or collection at a time.
-
-## Improving an existing topic or collection
-
-If a topic or collection already exists, it will be listed in its respective directory:
-
-- [topics/](https://github.com/github/explore/tree/main/topics)
-- [collections/](https://github.com/github/explore/tree/main/collections)
-
-The topic or collection name should match its URL, e.g. `https://github.com/topics/rails` corresponds to the [`topics/rails` directory](https://github.com/github/explore/tree/main/topics/rails).
-
-To make an improvement, please **open a pull request** with your proposed changes. 
-
-### Update the image
-
-To update the image, simply replace the image inside the directory for the topic or collection.
-
-### Update text and links
-
-To update text and links, edit the `index.md` inside the topic or collection's directory. These files are formatted using a combination of [Front Matter](https://jekyllrb.com/docs/frontmatter/) and simple body content.
-
-For **topics**, you'll notice that, in examples like the topic "[algorithm](https://raw.githubusercontent.com/github/explore/main/topics/algorithm/index.md)," data like its canonical URL, Wikipedia URL, or display name are called out in key-value pairs, while its detailed description is accounted for in the body of the document.
-
-_/topics/algorithm/index.md_:
-
-```markdown
----
-aliases: algorithms
-display_name: Algorithm
-short_description: Algorithms are self-contained sequences that carry out a variety of tasks.
-topic: algorithm
-wikipedia_url: https://en.wikipedia.org/wiki/Algorithm
----
-Algorithms are detailed sets of guidelines created for a computer program to complete tasks efficiently and thoroughly.
-```
-
----
-
-Similarly, **collections** like "[music](https://raw.githubusercontent.com/github/explore/main/collections/music/index.md)" call out things like their author and display name in Front Matter variables -- with a detailed description in the body of the document. Most importantly, though, collections identify their individual collection items in [a YAML list](https://en.wikipedia.org/wiki/YAML#Basic_components) for the key "items."
-
-_/collections/music/index.md_:
-
-```markdown
----
-items:
- - beetbox/beets
- - scottschiller/SoundManager2
- - CreateJS/SoundJS
- - musescore/MuseScore
- - tomahawk-player/tomahawk
- - cashmusic/platform
- - mopidy/mopidy
- - AudioKit/AudioKit
- - Soundnode/soundnode-app
- - gillesdemey/Cumulus
- - metabrainz/picard
- - overtone/overtone
- - samaaron/sonic-pi
-display_name: Music
-created_by: jonrohan
----
-Drop the code bass with these musically themed repositories.
-```
-
----
-
-The [pull request template](./.github/PULL_REQUEST_TEMPLATE.md) also provides guidance on the information you need to include.
-
-**Please fill out the pull request template completely,** if you do not fill out the template, your PR will be closed.
-
-## Curating a new topic or collection
-
-If a topic or collection is not yet curated, it will NOT be listed in its respective directory.
-
-We are likely to consider suggestions to curate a topic or collection that is valuable to GitHub's community. Valuable topics, for example, include those that are already [widely used by repositories](https://help.github.com/articles/classifying-your-repository-with-topics/) and could benefit from the addition of important information. When suggesting content, please consider how to make your contribution broadly useful and relevant to others, rather than serving a specific use case.
-
-Please note that all suggestions must adhere to GitHub's [Community Guidelines](https://help.github.com/articles/github-community-guidelines/) and [Terms of Service](https://help.github.com/articles/github-terms-of-service/). Per our Terms of Service, [you are responsible](https://help.github.com/articles/github-terms-of-service/#d-user-generated-content) for the content you contribute, and you must have the rights to use it.
-
-To propose a new topic or collection, please **open a pull request** with your proposed additions. The [API docs](./docs/API.md) and [style guide](./docs/styleguide.md) provide guidance on the information you need to include and how it should be formatted.
-
-This repository includes [a list of the most-used GitHub topics that don't yet have extra context](topics-todo.md). If your pull request adds one of these topics, please update topics-todo.md so that the topic is checked (marked complete).
-
-**Please fill out the pull request template completely.** If you do not fill out the template, your pull request will be closed.
-
-## Guidelines
-
-- Avoid conflicts of interest. These should be of general community interest, not a marketing vehicle for a product or a personal project. If you are a direct employee of a company creating the project, or the creator and sole maintainer, it's unlikely to be accepted.
-- We love experimenting with new technologies, and we are especially fond of GitHub Copilot. But as with all new technology, many of us are still getting accustomed to using generative AI tools effectively. Here are important guidelines to follow when using generative AI to contribute to this repository (adapted from the [GitHub Community Discussions CoC](https://github.com/community/community/blob/main/CODE_OF_CONDUCT.md#reasonable-use-of-ai-generated-content)):
-  - Read and revise the content before you post it. Use your own authentic voice and edit.
-  - Do not post AI-generated content verbatim to pad out the size and number of your contributions. Your changes should materially improve the site, not just say the same thing in different words.
-  - AI tools will often provide completely inaccurate or invented answers to prompts. Verify with an independent source that the information is correct before including it.
-
-## Running tests
-
-There are some lint tests in place to ensure each topic is formatted in the way we expect. GitHub
-Actions will run the tests automatically. If you want to run the tests yourself locally, you will
-need Ruby and Bundler installed.
-
-You can run the tests using:
-
-```bash
-bundle install
-bundle exec rubocop
-```
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sneha. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">LinkedIn</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>
